@@ -3,7 +3,7 @@ class QtWebkit < Formula
   homepage "https://www1.qt.io/developers/"
   url "https://github.com/qt/qtwebkit/archive/v5.212.0-alpha2.tar.gz"
   sha256 "6db43b931f64857cfda7bcf89914e2730b82164871a8c24c1881620e6bfdeca1"
-  revision 6
+  revision 7
   head "https://github.com/qt/qtwebkit.git"
 
   depends_on "cmake" => :build
@@ -53,6 +53,7 @@ class QtWebkit < Formula
     args << "-DEGPF_SET_RPATH=OFF"
     args << "-DCMAKE_SKIP_RPATH=ON"
     args << "-DCMAKE_SKIP_INSTALL_RPATH=ON"
+    args << "-DCMAKE_INSTALL_LIBEXECDIR=lib"
 
     # Fuck off rpath
     inreplace "Source/cmake/OptionsQt.cmake",

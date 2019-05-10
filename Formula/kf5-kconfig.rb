@@ -3,7 +3,7 @@ class Kf5Kconfig < Formula
   homepage "https://www.kde.org"
   url "https://download.kde.org/stable/frameworks/5.57/kconfig-5.57.0.tar.xz"
   sha256 "155b0dbba8772aa8ea3e75217029daa00ada8699e5a807154214f66b2462c010"
-
+  revision 1
   head "git://anongit.kde.org/kconfig.git"
 
   depends_on "cmake" => :build
@@ -21,6 +21,7 @@ class Kf5Kconfig < Formula
     args << "-DKDE_INSTALL_QMLDIR=lib/qt5/qml"
     args << "-DKDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
     args << "-DKDE_INSTALL_QTPLUGINDIR=lib/qt5/plugins"
+    args << "-DCMAKE_INSTALL_LIBEXECDIR=lib"
 
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args

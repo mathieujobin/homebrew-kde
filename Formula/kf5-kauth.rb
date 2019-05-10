@@ -3,7 +3,7 @@ class Kf5Kauth < Formula
   homepage "https://www.kde.org"
   url "https://download.kde.org/stable/frameworks/5.57/kauth-5.57.0.tar.xz"
   sha256 "9d6b9135cc47710b28e2a7731c4c5c1f6dba2b0e5fe982b9d2a82a11d7d497c2"
-
+  revision 1
   head "git://anongit.kde.org/kauth.git"
 
   depends_on "cmake" => :build
@@ -22,6 +22,7 @@ class Kf5Kauth < Formula
     args << "-DKDE_INSTALL_QMLDIR=lib/qt5/qml"
     args << "-DKDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
     args << "-DKDE_INSTALL_QTPLUGINDIR=lib/qt5/plugins"
+    args << "-DCMAKE_INSTALL_LIBEXECDIR=lib"
 
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args

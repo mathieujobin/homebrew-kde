@@ -3,7 +3,7 @@ class Kf5Kdelibs4support < Formula
   homepage "https://www.kde.org"
   url "https://download.kde.org/stable/frameworks/5.57/portingAids/kdelibs4support-5.57.0.tar.xz"
   sha256 "e9d1c06191031b482ea01d891756d125ff32927239c36a3011fc7b8f17aca1b0"
-
+  revision 1
   head "git://anongit.kde.org/kdelibs4support.git"
 
   depends_on "cmake" => :build
@@ -29,6 +29,7 @@ class Kf5Kdelibs4support < Formula
     args << "-DKDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
     args << "-DKDE_INSTALL_QTPLUGINDIR=lib/qt5/plugins"
     args << "-DCMAKE_INSTALL_BUNDLEDIR=#{bin}"
+    args << "-DCMAKE_INSTALL_LIBEXECDIR=lib"
 
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args

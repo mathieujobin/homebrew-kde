@@ -3,7 +3,7 @@ class Kf5Kinit < Formula
   homepage "https://www.kde.org"
   url "https://download.kde.org/stable/frameworks/5.57/kinit-5.57.0.tar.xz"
   sha256 "7d5ca84d7bd554531aa6d720d3dc41ac091cf047a52d097a23e5c8fad08b684c"
-
+  revision 1
   head "git://anongit.kde.org/kinit.git"
 
   depends_on "cmake" => :build
@@ -21,6 +21,7 @@ class Kf5Kinit < Formula
     args << "-DKDE_INSTALL_QMLDIR=lib/qt5/qml"
     args << "-DKDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
     args << "-DKDE_INSTALL_QTPLUGINDIR=lib/qt5/plugins"
+    args << "-DCMAKE_INSTALL_LIBEXECDIR=lib"
 
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args

@@ -3,7 +3,7 @@ class Kf5Kxmlgui < Formula
   homepage "https://www.kde.org"
   url "https://download.kde.org/stable/frameworks/5.57/kxmlgui-5.57.0.tar.xz"
   sha256 "325124518e8fa4847c898dee193d96b76a7ba27d7c79d875f34c632f46fe1f90"
-
+  revision 1
   head "git://anongit.kde.org/kxmlgui.git"
 
   depends_on "cmake" => :build
@@ -24,6 +24,7 @@ class Kf5Kxmlgui < Formula
     args << "-DKDE_INSTALL_QMLDIR=lib/qt5/qml"
     args << "-DKDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
     args << "-DKDE_INSTALL_QTPLUGINDIR=lib/qt5/plugins"
+    args << "-DCMAKE_INSTALL_LIBEXECDIR=lib"
 
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args
