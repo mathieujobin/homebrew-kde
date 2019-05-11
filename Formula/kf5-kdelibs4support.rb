@@ -18,7 +18,7 @@ class Kf5Kdelibs4support < Formula
   depends_on "KDE-mac/kde/kf5-kitemmodels"
   depends_on "KDE-mac/kde/kf5-kparts"
   depends_on "KDE-mac/kde/kf5-kunitconversion"
-  depends_on "openssl"
+  depends_on "openssl@1.1"
 
   patch :DATA
 

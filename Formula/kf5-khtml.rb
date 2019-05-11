@@ -3,7 +3,7 @@ class Kf5Khtml < Formula
   homepage "https://www.kde.org"
   url "https://download.kde.org/stable/frameworks/5.57/portingAids/khtml-5.57.0.tar.xz"
   sha256 "63d22fbc8cad3075a0b7ef195291c4b79ebc65da5de81b4885cac1063d783da3"
-  revision 1
+  revision 2
   head "git://anongit.kde.org/khtml.git"
 
   depends_on "cmake" => :build
@@ -17,7 +17,7 @@ class Kf5Khtml < Formula
   depends_on "KDE-mac/kde/kf5-kparts"
   depends_on "KDE-mac/kde/phonon"
   depends_on "libpng"
-  depends_on "openssl"
+  depends_on "openssl@1.1"
   depends_on "zlib"
 
   def install
