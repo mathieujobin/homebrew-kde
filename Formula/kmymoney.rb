@@ -1,9 +1,9 @@
 class Kmymoney < Formula
   desc "Personal finance manager similar to MS-Money or Quicken"
   homepage "https://kmymoney.org"
-  url "https://download.kde.org/stable/kmymoney/5.0.3/src/kmymoney-5.0.3.tar.xz"
-  sha256 "698c0fc7ef2134c5c120a98b10f033e14dc37bff723b562c3b50a018c6ebdbf8"
-  revision 1
+  url "https://download.kde.org/stable/kmymoney/5.0.4/src/kmymoney-5.0.4.tar.xz"
+  sha256 "1829bd921c59d310e8da37c26fe81616235edef0b50aadedf20cad44e1568b1a"
+
   head "git://anongit.kde.org/kmymoney.git"
 
   depends_on "cmake" => :build
@@ -19,16 +19,27 @@ class Kmymoney < Formula
   depends_on "KDE-mac/kde/kdiagram"
   depends_on "KDE-mac/kde/kf5-breeze-icons"
   depends_on "KDE-mac/kde/kf5-kactivities"
+  depends_on "KDE-mac/kde/kf5-karchive"
   depends_on "KDE-mac/kde/kf5-kcmutils"
+  depends_on "KDE-mac/kde/kf5-kcompletion"
   depends_on "KDE-mac/kde/kf5-kdewebkit"
+  depends_on "KDE-mac/kde/kf5-kdoctools"
+  depends_on "KDE-mac/kde/kf5-ki18n"
+  depends_on "KDE-mac/kde/kf5-kiconthemes"
   depends_on "KDE-mac/kde/kf5-kio"
   depends_on "KDE-mac/kde/kf5-kitemmodels"
+  depends_on "KDE-mac/kde/kf5-kitemviews"
+  depends_on "KDE-mac/kde/kf5-knotifications"
+  depends_on "KDE-mac/kde/kf5-kross"
+  depends_on "KDE-mac/kde/kf5-kservice"
+  depends_on "KDE-mac/kde/kf5-ktextwidgets"
+  depends_on "KDE-mac/kde/kf5-kwallet"
+  depends_on "KDE-mac/kde/kf5-kwidgetsaddons"
+  depends_on "KDE-mac/kde/kf5-kxmlgui"
   depends_on "KDE-mac/kde/libalkimia"
   depends_on "libical"
   depends_on "libofx"
   depends_on "sqlcipher"
-
-  depends_on "KDE-mac/kde/kf5-kross" => :optional
 
   def install
     args = std_cmake_args

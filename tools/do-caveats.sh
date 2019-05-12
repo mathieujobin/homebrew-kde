@@ -48,10 +48,12 @@ ln -sfv "$(brew --prefix)/share/konqsidebartng" "$HOME/Library/Application Suppo
 ln -sfv "$(brew --prefix)/share/konqueror" "$HOME/Library/Application Support"
 ln -sfv "$(brew --prefix)/share/remoteview" "$HOME/Library/Application Support"
 ln -sfv "$(brew --prefix)/share/solid" "$HOME/Library/Application Support"
+# libalkimia
+ln -sfv "$(brew --prefix)/opt/libalkimia/bin/onlinequoteseditor.app" "$HOME/Applications/KDE"
 # kmymoney
 ln -sfv "$(brew --prefix)/share/kmymoney" "$HOME/Library/Application Support"
-ln -sfv "$(brew --prefix)/share/kmm_weboob" "$HOME/Library/Application Support"
-ln -sfv "$(brew --prefix)/share/kmm_printcheck" "$HOME/Library/Application Support"
+ln -sfv "$(brew --prefix)/share/kbanking" "$HOME/Library/Application Support"
+ln -sfv "$(brew --prefix)/share/checkprinting" "$HOME/Library/Application Support"
 ln -sfv "$(brew --prefix)/opt/kmymoney/bin/kmymoney.app" "$HOME/Applications/KDE"
 # kolourpaint
 ln -sfv "$(brew --prefix)/share/kolourpaint" "$HOME/Library/Application Support"
