@@ -16,7 +16,6 @@ class Kmymoney < Formula
 
   depends_on "aqbanking"
   depends_on "boost"
-  depends_on "gwenhywfar"
   depends_on "gpgme"
   depends_on "KDE-mac/kde/kf5-breeze-icons"
   depends_on "KDE-mac/kde/kf5-kactivities"
@@ -36,7 +35,6 @@ class Kmymoney < Formula
   depends_on "KDE-mac/kde/kf5-kxmlgui"
   depends_on "KDE-mac/kde/libalkimia"
   depends_on "libical"
-  depends_on "libofx"
   depends_on "sqlcipher"
 
   def install
