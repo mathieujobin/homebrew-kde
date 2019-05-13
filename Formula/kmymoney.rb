@@ -23,9 +23,9 @@ class Kmymoney < Formula
   depends_on "KDE-mac/kde/kf5-karchive"
   depends_on "KDE-mac/kde/kf5-kcmutils"
   depends_on "KDE-mac/kde/kf5-kcompletion"
-  depends_on "KDE-mac/kf5/kf5-kconfig"
-  depends_on "KDE-mac/kf5/kf5-kcoreaddons"
-  depends_on "KDE-mac/kf5/kf5-kdewebkit"
+  depends_on "KDE-mac/kde/kf5-kconfig"
+  depends_on "KDE-mac/kde/kf5-kcoreaddons"
+  depends_on "KDE-mac/kde/kf5-kdewebkit"
   depends_on "KDE-mac/kde/kf5-kdoctools"
   depends_on "KDE-mac/kde/kf5-ki18n"
   depends_on "KDE-mac/kde/kf5-kiconthemes"
@@ -47,6 +47,7 @@ class Kmymoney < Formula
     args << "-DKDE_INSTALL_QMLDIR=lib/qt5/qml"
     args << "-DKDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
     args << "-DCMAKE_INSTALL_BUNDLEDIR=#{bin}"
+    args << "-DENABLE_WEBENGINE=ON"
 
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args
